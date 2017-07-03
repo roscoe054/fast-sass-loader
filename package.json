@@ -1,5 +1,5 @@
 {
-  "name": "fast-sass-loader",
+  "name": "@qnpm/fast-sass-loader-china",
   "description": "fast sass loader for webpack",
   "version": "1.1.0",
   "main": "lib/index.js",
@@ -41,8 +41,7 @@
     "loader-utils": "^0.2.15"
   },
   "peerDependencies": {
-    "node-sass": "^4.0.0",
-    "webpack": "1.x || 2.x"
+    "node-sass-china": "^4.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.12.0",
@@ -52,24 +51,19 @@
     "husky": "^0.13.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "node-sass": "^4.0.0",
     "npm-ensure": "^1.1.0",
     "sass-loader": "^6.0.3",
     "standard": "^9.0.2",
     "webpack": "1.x || 2.x"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yibn2008/fast-sass-loader.git"
+    "type": "https",
+    "url": "https://github.com/roscoe054/fast-sass-loader.git"
   },
   "keywords": [
     "sass-loader",
     "fast"
   ],
-  "author": "yibn2008",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yibn2008/fast-sass-loader/issues"
-  },
-  "homepage": "https://github.com/yibn2008/fast-sass-loader#readme"
+  "author": "yuhao.ju",
+  "license": "MIT"
 }
