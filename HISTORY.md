@@ -1,4 +1,41 @@
 
+1.2.5 / 2017-05-24
+==================
+
+  * fix: remove performance test
+  * fix: fix Files with double extensions are not resolved, close #11
+
+1.2.4 / 2017-04-13
+==================
+
+  * fix: fix for include path
+
+1.2.3 / 2017-04-05
+==================
+
+  * fix: handle inline loader
+  * test: add simple test case
+  * test: add unit test for simple condition
+
+1.2.2 / 2017-04-04
+==================
+
+  * fix: fix empty query
+
+1.2.1 / 2017-04-04
+==================
+
+  * chore: add docs
+
+1.2.0 / 2017-04-04
+==================
+
+  * feat: add include paths support
+  * docs: add same variable name warning
+  * fix: fix github languages
+  * chore: add performance test case
+  * chore: cheanup configs
+
 1.1.0 / 2017-03-18
 ==================
 
