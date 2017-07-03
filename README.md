@@ -28,7 +28,7 @@ fast sass loader for webpack. 5~10 times faster than **sass-loader**, and suppor
 
 ## Performance
 
-You can execute `npm run perf` to see the performance benchmark:
+performance benchmark:
 
 ```text
 ************** RUN WITH FAST SASS LOADER **************
@@ -93,7 +93,12 @@ and you need install **node-sass** and **webpack** as peer dependencies.
         test: /\.(scss|sass)$/,
         use: [
           'css-loader',
-          'fast-sass-loader'
+          {
+            loader: 'fast-sass-loader',
+            options: {
+              includePaths: [ ... ]
+            }
+          }
         ]
       },
       // other loaders ...
@@ -117,6 +122,26 @@ and you need install **node-sass** and **webpack** as peer dependencies.
   }
 }
 ```
+
+## Options
+
+### includePaths:
+
+An array of paths that [node-sass](https://github.com/sass/node-sass) can look in to attempt to resolve your @import declarations. When using data, it is recommended that you use this.
+
+### data:
+If you want to prepend Sass code before the actual entry file, you can set the data option. In this case, the loader will not override the data option but just append the entry's content. This is especially useful when some of your Sass variables depend on the environment:
+
+```javascript
+{
+    loader: "fast-sass-loader",
+    options: {
+        data: "$env: " + process.env.NODE_ENV + ";"
+    }
+}
+```
+
+Please note: Since you're injecting code, this will break the source mappings in your entry file. Often there's a simpler solution than this.
 
 ## Warning
 
@@ -159,10 +184,11 @@ h1 { color: $foobar; }
 @import "b.scss";
 @import "a.scss"; // this file will be ignore: $foobar === #AAA
 
+h2 { color: $foobar; }
+
 // will output:
 // h1 { color: #AAA; }
 // h2 { color: #AAA; }
-h2 { color: $foobar; }
 ```
 
 You can use variable prefix to bypass.
