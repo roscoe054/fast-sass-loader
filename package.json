@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "async": "^2.0.1",
+    "babel-polyfill": "^6.23.0",
     "cli-source-preview": "^1.0.0",
     "co": "^4.6.0",
     "fs-promise": "^0.5.0",
