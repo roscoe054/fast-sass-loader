@@ -1,7 +1,7 @@
 {
-  "name": "fast-sass-loader-china",
+  "name": "@qnpm/fast-sass-loader-china",
   "description": "fast sass loader for webpack",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "lib/index.js",
   "scripts": {
     "lint": "standard --fix && npm-ensure -t deps",
